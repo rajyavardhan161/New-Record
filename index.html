@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Record</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="parent">
+        <div class="main">
+        <div class="lineone">
+            <h3>Add New Record</h3>
+            <a href="" id="iconone"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="inputmain">
+            <div class="inputone">
+                <label for=""type>Type</label><br>
+                <select name="" class="selectone">
+                   <option value="" disabled selected>Choose an option</option>
+                    <option value="">A</option>
+                    <option value="">AAAA</option>
+                    <option value="">CNAME</option>
+                    <option value="">MX</option>
+                </select><br>
+            </div>
+            <div class="inputone">
+                <label for=""type>Name</label><br>
+                <input type="text" class="selectone" placeholder="@ or www">
+            </div>
+            <div class="inputone">
+                <label for=""type>Value</label><br>
+                <input type="value" class="selectone" placeholder="XX.XX.XX.XX">
+            </div>
+           <div class="inputone">
+                <label for=""type>TTL</label><br>
+                <select name="" class="selectone">
+                    <option value="">1/2 Hour</option>
+                    <option value="">1 Hour</option>
+                    <option value="">3 Hour</option>
+                </select><br>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+    <div id="add"></div>
+    <div class="btnmain">
+            <button class="btnone">Add New Record</button>
+            <button class="btntwo">Save</button>
+    </div>
+
+    <script>g
+    let button=document.querySelector('.btnone')
+    button.addEventListener('click',()=> {
+        let parent = document.querySelector('.parent');
+        let clone = parent.cloneNode(true);
+
+        let add = document.getElementById('add');
+        add.append(clone);
+    });
+    </script>
+</body>
+</html>
