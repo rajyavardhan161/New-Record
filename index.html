@@ -31,7 +31,7 @@
             </div>
             <div class="inputone">
                 <label for=""type>Value</label><br>
-                <input type="value" class="selectone" placeholder="XX.XX.XX.XX">
+                <input type="value" id="input" class="selectone" placeholder="XX.XX.XX.XX">
             </div>
            <div class="inputone">
                 <label for=""type>TTL</label><br>
@@ -54,12 +54,19 @@
 
     <script>
     let button=document.querySelector('.btnone')
+    let input=document.querySelector('#input')
     button.addEventListener('click',()=> {
         let parent = document.querySelector('.parent');
         let clone = parent.cloneNode(true);
+        
+         clone.querySelectorAll('input').forEach(input => input.value = '');
+        clone.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
+
+
 
         let add = document.getElementById('add');
         add.append(clone);
+        
     });
     </script>
 </body>
